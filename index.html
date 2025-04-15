@@ -3,64 +3,86 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="refresh" content="3;url=https://ziyizhao-bio.github.io" />
-    <title>Redirecting to Ziyi Zhao's New Homepage</title>
+    <title>Redirecting...</title>
     <style>
       body {
+        background: #f0f2f5;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
           "Open Sans", "Helvetica Neue", sans-serif;
-        background-color: #f4f6fa;
-        color: #333;
         display: flex;
-        flex-direction: column;
         align-items: center;
         justify-content: center;
         height: 100vh;
         margin: 0;
+      }
+
+      .dialog {
+        background: #fff;
+        padding: 2rem 2.5rem;
+        border-radius: 16px;
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+        max-width: 420px;
         text-align: center;
+        animation: fadeIn 0.4s ease-out;
       }
 
-      h1 {
-        font-size: 2rem;
-        margin-bottom: 0.4rem;
+      .dialog h1 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
       }
 
-      h2 {
-        font-size: 1.2rem;
-        font-weight: normal;
+      .dialog p {
+        font-size: 1rem;
         color: #555;
-        margin-bottom: 1.5rem;
+        margin: 0.5rem 0 1.5rem;
       }
 
-      a {
+      .dialog a {
+        display: inline-block;
+        margin-top: 0.5rem;
         color: #007acc;
         text-decoration: none;
         font-weight: 500;
       }
 
-      a:hover {
+      .dialog a:hover {
         text-decoration: underline;
       }
 
       .loader {
-        margin-top: 1.5rem;
-        border: 4px solid #e0e0e0;
+        margin-top: 1rem;
+        border: 4px solid #eee;
         border-top: 4px solid #007acc;
         border-radius: 50%;
-        width: 36px;
-        height: 36px;
-        animation: spin 1s linear infinite;
+        width: 32px;
+        height: 32px;
+        animation: spin 0.9s linear infinite;
       }
 
       @keyframes spin {
-        to { transform: rotate(360deg); }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: scale(0.96);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
       }
     </style>
   </head>
   <body>
-    <h1>🔄 Redirecting to My New Homepage</h1>
-    <h2>Please wait while we take you to the latest version of my website</h2>
-    <p>If you are not redirected in a few seconds, click below:</p>
-    <p><a href="https://ziyizhao-bio.github.io">https://ziyizhao-bio.github.io</a></p>
-    <div class="loader" aria-hidden="true"></div>
+    <div class="dialog">
+      <h1>🔄 Redirecting to my new homepage</h1>
+      <p>You’ll be taken to the updated site in a few seconds.</p>
+      <a href="https://ziyizhao-bio.github.io">Click here if it doesn't happen automatically</a>
+      <div class="loader" aria-hidden="true"></div>
+    </div>
   </body>
 </html>
